@@ -18,8 +18,8 @@ X
 
 ---
 
-* [Blog Entry 1](entries/entry01.md)
-* [Blog Entry 2](entries/entry02.md)
+* [Finding Tools](entries/entry01.md)
+* [Tinker Tool](entries/entry02.md)
 * [Blog Entry 3](entries/entry03.md)
 * [Blog Entry 4](entries/entry04.md)
 * [Blog Entry 5](entries/entry05.md)
