@@ -15,15 +15,10 @@ In order to learn FireBase and how to connected it. I have tried to use my past 
 My first tinkering didn't work, so then I just went to my solution where my teacher have posted the solution for a project for realtime database. I bascially copy everything and test it out again, but it have the same error where the "initial Firebase was not define". The only thing I change my getting a new api for the config and initial, If I literally copy everything, the code wouldn't work because of the key wasn't mine or it was expire.
 
 
-![](../pic/codesnippet.png)
-
-My second solution didn't work either, so then my final solution is just looking up at youtube or the official website on firebase and restart from scratch. I didn't really know the reason why it states that the initial firebase it not define, maybe firebase got an update and change something. Using the video it was very confusing and tried my best to understand the video because their were many new... [Youtube](https://www.javatpoint.com/firebase-introduction#:~:text=Firebase%20(a%20NoSQLjSON%20database)%20is,%2C%20IOS%2C%20and%20Web%20apps.) and [Official video](https://firebase.google.com/docs/web/setup)
+My second solution didn't work either, so then my final solution is just looking up at youtube or the official website on firebase and restart from scratch. I didn't really know the reason why it states that the initial firebase it not define, maybe firebase got an update and change something. Using the video it was very confusing and tried my best to understand the video because their were many new... [Youtube](https://www.javatpoint.com/firebase-introduction#:~:text=Firebase%20(a%20NoSQLjSON%20database)%20is,%2C%20IOS%2C%20and%20Web%20apps.)[Official video](https://firebase.google.com/docs/web/setup)
 
 ### Takeaway
-This blog have help me develop how to google, how to learn, embracing failure and growth mindset. first in order tinkler with firebase I need to have the mental capacity of wanting to learn and able to deal with my failure because I tried three ways to tried to learn my tools about firebase, even though I wasn't able to figure the reason why it doesn't work. It allowed me to learn something else about it. Such as needing the DOM and doing this blog entries.
-
-
-
+This blog have help me develop how to 
 [Previous](entry01.md) | [Next](entry03.md)
 
 [Home](../README.md)
