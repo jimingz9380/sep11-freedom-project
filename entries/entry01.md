@@ -9,7 +9,7 @@ In order to do this I have decided to use the hardest tool in the option of Sep1
 
 Note: your welcome for not giving you the pass to it.
 ### Takeaway
-This blog entry have help me developed the skill of Consideration and How to google. It improved my help on google because I need to search for a right video that will actually help me learn something about firebase and not just probably some random outdated video. 
+This blog entry have help me developed the skill of Consideration and How to google. It improved my help on google because I need to search for a right video that will actually help me learn something about firebase and not just probably some random outdated video.
 
 [Next](entry02.md)
 
