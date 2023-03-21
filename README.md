@@ -20,8 +20,8 @@ X
 
 * [Finding Tools](entries/entry01.md)
 * [Tinker Tool](entries/entry02.md)
-* [Blog Entry 3](entries/entry03.md)
-* [Blog Entry 4](entries/entry04.md)
+* [Tinker Tool P2](entries/entry03.md)
+* [Plan and Create](entries/entry04.md)
 * [Blog Entry 5](entries/entry05.md)
 * [Blog Entry 6](entries/entry06.md)
 * [Blog Entry 7](entries/entry07.md)
