@@ -42,7 +42,7 @@
         const messageElem = document.querySelector("#message");
         const sendBtn = document.querySelector("#message-btn");
 
-        function updateDB(event){
+        sendBtn.addEventListener("click", function updateDB(event){
             //prevent default behavior fo form refreshing
             // create an object to store values of input element
 
@@ -51,11 +51,8 @@
                 MESSAGE: messageElem.value
 
            }
-
            //print for good measure
            console.log(data);
-           //write to the database
-           messageElem.value = "";
-        }
 
-        updateDB()
+        })
+
