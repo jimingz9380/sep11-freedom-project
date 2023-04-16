@@ -47,23 +47,22 @@
             console.log(messageElem)
         });
 
-        // sendBtn.addEventListener("click", function updateDB(){
-        //     //prevent default behavior fo form refreshing
-        //     const numberLikes = messageElem.value;
-        //     set(ref(db, "messages"), {
-        //         messageElem: messageElem.value,
-        //     });
+        sendBtn.addEventListener("click", function updateDB(){
+            //prevent default behavior fo form refreshing
+            const numberLikes = messageElem.value;
+            set(ref(db, "messages"), {
+                messageElem: messageElem.value,
+            });
 
-        //     // let data = {
-        //     //     USERNAME: usernameElem.value,
-        //     //     MESSAGE: messageElem.value
-        //     // }
-        //     // //print for good measure
-        //     // console.log(data);
+        })
 
-        //     // let para = document.createElement("p")
-        //     // para.innerHTML = messageElem.value
-        //     // allMessages.appendChild(para)
+        // let data = {
+            //     USERNAME: usernameElem.value,
+            //     MESSAGE: messageElem.value
+            // }
+            // //print for good measure
+            // console.log(data);
 
-        // })
-
+            // let para = document.createElement("p")
+            // para.innerHTML = messageElem.value
+            // allMessages.appendChild(para)
