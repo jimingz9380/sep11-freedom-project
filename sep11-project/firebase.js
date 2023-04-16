@@ -20,6 +20,7 @@
 
 
         // custom code
+
         const numLikesDOM = document.querySelector('#numLikes');
         onValue(ref(db, "/likes/numLikes"), (snapshot) => {
             let data = snapshot.val();
@@ -34,7 +35,7 @@
                 numLikes: numberLikes,
             });
 
+
+
         });
-
-
 
