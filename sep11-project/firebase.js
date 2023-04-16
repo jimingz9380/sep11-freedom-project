@@ -19,25 +19,24 @@
         const db = getDatabase(app);
 
 
-        // custom code
+        // // custom code
+        // const numLikesDOM = document.querySelector('#numLikes');
+        // onValue(ref(db, "/likes/numLikes"), (snapshot) => {
+        //     let data = snapshot.val();
+        //     numLikesDOM.innerHTML = data
+        // });
 
-        const numLikesDOM = document.querySelector('#numLikes');
-        onValue(ref(db, "/likes/numLikes"), (snapshot) => {
-            let data = snapshot.val();
-            numLikesDOM.innerHTML = data
-        });
+        // document.querySelector('button').addEventListener('click',function(){
+        //     // const numberLikes = parseInt(numLikes[i].innerHTML) + 1
 
-        document.querySelector('button').addEventListener('click',function(){
-            // const numberLikes = parseInt(numLikes[i].innerHTML) + 1
+        //     const numberLikes = parseInt(numLikesDOM.innerHTML) + 1;
+        //     set(ref(db, "likes"), {
+        //         numLikes: numberLikes,
+        //     });
 
-            const numberLikes = parseInt(numLikesDOM.innerHTML) + 1;
-            set(ref(db, "likes"), {
-                numLikes: numberLikes,
-            });
+        // });
 
-        });
-
-        // const allMessages = document.querySelector("#all-messages");
+        const allMessages = document.querySelector("#all-messages");
         const usernameElem = document.querySelector("#user-input");
         const messageElem = document.querySelector("#message-input");
         const sendBtn = document.querySelector("#message-btn");
