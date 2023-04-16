@@ -35,7 +35,31 @@
                 numLikes: numberLikes,
             });
 
-
-
         });
 
+        const allMessages = document.querySelector("#all-messages");
+        const usernameElem = document.querySelector("#username");
+        const messageElem = document.querySelector("#message");
+        const sendBtn = document.querySelector("#send-btn");
+
+        function updateDB(event){
+            //prevent default behavior fo form refreshing
+            event.preventDefault();
+            // create an object to store values of input element
+
+            let data = {
+                USERNAME: usernameElem.value,
+                MESSAGE: messageElem.value
+
+           }
+
+           //print for good measure
+           console.log(data);
+
+           //write to the database
+           dataBase.push(data);
+
+           messageElem.value = "";
+        }
+
+        updateDB()
