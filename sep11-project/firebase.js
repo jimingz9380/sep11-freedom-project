@@ -24,6 +24,8 @@
         onValue(ref(db, "/likes/numLikes"), (snapshot) => {
             let data = snapshot.val();
             numLikesDOM.innerHTML = data
+            console.log(data)
+
         });
 
         document.querySelector('button').addEventListener('click',function(){
@@ -43,7 +45,7 @@
 
         onValue(ref(db, "/messages"), (snapshot) => {
             let data = snapshot.val();
-            messageElem.innerHTML = data
+            allMessages.innerHTML = data
             console.log(messageElem)
         });
 
