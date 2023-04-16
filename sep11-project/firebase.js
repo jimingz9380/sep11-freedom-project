@@ -4,13 +4,14 @@
 
 
         const firebaseConfig = {
-            apiKey: "AIzaSyAmKEFgm7mc0L4LRTU_slN4r2gprjnSQ18",
-            authDomain: "fir-learning-54799.firebaseapp.com",
-            databaseURL: "https://practice-firebase-ccc3e-default-rtdb.firebaseio.com/",
-            projectId: "fir-learning-54799",
-            storageBucket: "fir-learning-54799.appspot.com",
-            messagingSenderId: "884794095306",
-            appId: "1:884794095306:web:742b322afb1e3228d7a633"
+            apiKey: "AIzaSyByrZHtWHyaMUAxSHt5IUq897zXHPWdVys",
+            authDomain: "fir-realtime-trial2.firebaseapp.com",
+            databaseURL: "https://fir-realtime-trial2-default-rtdb.firebaseio.com",
+            projectId: "fir-realtime-trial2",
+            storageBucket: "fir-realtime-trial2.appspot.com",
+            messagingSenderId: "766643859179",
+            appId: "1:766643859179:web:0435595dd4b47308e3d8ae",
+            measurementId: "G-V76PKJ5X2V"
         };
 
         // Initialize Firebase
