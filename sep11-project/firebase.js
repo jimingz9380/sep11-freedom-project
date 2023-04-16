@@ -52,12 +52,12 @@
                 messageElem: messageElem.value,
             });
 
-            let data = {
-                USERNAME: usernameElem.value,
-                MESSAGE: messageElem.value
-            }
-            //print for good measure
-            console.log(data);
+            // let data = {
+            //     USERNAME: usernameElem.value,
+            //     MESSAGE: messageElem.value
+            // }
+            // //print for good measure
+            // console.log(data);
 
             // let para = document.createElement("p")
             // para.innerHTML = messageElem.value
