@@ -49,8 +49,9 @@
             console.log(data)
         });
 
-        sendBtn.addEventListener("click", function updateDB(){
+        sendBtn.addEventListener("click", function updateDB(event){
             //prevent default behavior fo form refreshing
+            event.preventDefault();
             set(ref(db, "messages"), {
                 messageElem: messageElem.value,
             });
