@@ -44,7 +44,6 @@
 
         function updateDB(event){
             //prevent default behavior fo form refreshing
-            event.preventDefault();
             // create an object to store values of input element
 
             let data = {
@@ -62,18 +61,9 @@
            messageElem.value = "";
         }
 
+        updateDB()
         dataBase.on("child_added", addMessageToBoard);
 
-        /**
-         * @TODO create a function called addMessageToBoard that
-         * takes one parameter rowData which:
-         *      - console.logs the data within rowData
-         *      - creates a new HTML element for a single message
-         *        containing the appropriate data
-         *      - appends this HTML to the div with id
-         *        #all-messages (we should have a reference already!)
-         *
-         */
         function addMessageToBoard(rowData){
             //print the data snapshot recieved
             console.log(rowData);
@@ -91,7 +81,7 @@
             allMessages.append(singleMessage);
 
         }
-        
+        addMessageToBoard()
         function makeSingleMessageHTML(usernameTxt, messageTxt){
             //create a parent div
             let parentDiv = document.createElement("div");
@@ -117,3 +107,5 @@
 
             return parentDiv;
         }
+
+        makeSingleMessageHTML()
