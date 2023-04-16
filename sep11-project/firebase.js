@@ -45,7 +45,7 @@
 
         onValue(ref(db, "/messages"), (snapshot) => {
             let data = snapshot.val();
-            allMessages.innerHTML = data
+            allMessages.innerHTML = data.value
             console.log(data)
         });
 
