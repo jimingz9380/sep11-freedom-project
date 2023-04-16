@@ -38,18 +38,16 @@
         });
 
         const allMessages = document.querySelector("#all-messages");
-        const usernameElem = document.querySelector("#username");
-        const messageElem = document.querySelector("#message");
+        const usernameElem = document.querySelector("#user-input");
+        const messageElem = document.querySelector("#message-input");
         const sendBtn = document.querySelector("#message-btn");
 
         sendBtn.addEventListener("click", function updateDB(event){
             //prevent default behavior fo form refreshing
-            // create an object to store values of input element
 
             let data = {
                 USERNAME: usernameElem.value,
                 MESSAGE: messageElem.value
-
            }
            //print for good measure
            console.log(data);
