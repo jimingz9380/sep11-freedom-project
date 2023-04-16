@@ -38,24 +38,27 @@
         });
 
         // const allMessages = document.querySelector("#all-messages");
-        // const usernameElem = document.querySelector("#user-input");
-        // const messageElem = document.querySelector("#message-input");
-        // const sendBtn = document.querySelector("#message-btn");
+        const usernameElem = document.querySelector("#user-input");
+        const messageElem = document.querySelector("#message-input");
+        const sendBtn = document.querySelector("#message-btn");
 
-        // onValue(ref(db, "/messages"), (snapshot) => {
-        //     let data = snapshot.value();
-        //     numLikesDOM.innerHTML = data
-        // });
+        onValue(ref(db, "/messages"), (snapshot) => {
+            let data = snapshot.value();
+            numLikesDOM.innerHTML = data
+        });
 
-        // sendBtn.addEventListener("click", function updateDB(event){
-        //     //prevent default behavior fo form refreshing
+        sendBtn.addEventListener("click", function updateDB(){
+            //prevent default behavior fo form refreshing
+            set(ref(db, "messages"), {
+                : messageElem.value,
+            });
 
-        //     let data = {
-        //         USERNAME: usernameElem.value,
-        //         MESSAGE: messageElem.value
-        //    }
-        //    //print for good measure
-        //    console.log(data);
+            let data = {
+                USERNAME: usernameElem.value,
+                MESSAGE: messageElem.value
+            }
+            //print for good measure
+            console.log(data);
 
-        // })
+        })
 
