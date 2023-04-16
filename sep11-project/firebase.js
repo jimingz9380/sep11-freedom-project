@@ -58,4 +58,4 @@
            messageElem.value = "";
         }
 
-        updateDB().onclick
+        updateDB()
