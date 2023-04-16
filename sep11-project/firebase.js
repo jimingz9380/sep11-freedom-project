@@ -60,7 +60,6 @@
 
             let chat = document.createElement("p")
             chat.innerHTML = usernameElem.value + ":" + " " +  messageElem.value
-            console.log(chat)
             allMessages.appendChild(chat )
 
         })
