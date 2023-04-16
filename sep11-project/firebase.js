@@ -59,5 +59,7 @@
             //print for good measure
             console.log(data);
 
+            let para = document.quereySelector.createElement("p")
+
         })
 
