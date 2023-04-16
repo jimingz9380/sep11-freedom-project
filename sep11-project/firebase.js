@@ -62,4 +62,58 @@
            messageElem.value = "";
         }
 
-        updateDB()
+        dataBase.on("child_added", addMessageToBoard);
+
+        /**
+         * @TODO create a function called addMessageToBoard that
+         * takes one parameter rowData which:
+         *      - console.logs the data within rowData
+         *      - creates a new HTML element for a single message
+         *        containing the appropriate data
+         *      - appends this HTML to the div with id
+         *        #all-messages (we should have a reference already!)
+         *
+         */
+        function addMessageToBoard(rowData){
+            //print the data snapshot recieved
+            console.log(rowData);
+
+            // get the actual data as a JSON object
+            let data = rowData.val();
+
+            //print the JSON data
+            console.log("RECIEVED FROM DATABASE", data);
+
+            //make a single message element
+            let singleMessage = makeSingleMessageHTML(data.USERNAME, data.MESSAGE)
+
+            //append this to #all-message;
+            allMessages.append(singleMessage);
+
+        }
+        
+        function makeSingleMessageHTML(usernameTxt, messageTxt){
+            //create a parent div
+            let parentDiv = document.createElement("div");
+            // add .single-messgae class
+            parentDiv.setAttribute("class", "single-message");
+
+            //create a p tag
+            let usernameP = document.createElement("p");
+            // add .single-messgae-username class
+            usernameP.classList.add("single-message-username");
+
+            //upadte innerHTML of this p
+            usernameP.innerHTML = usernameTxt + ":";
+            //append p tag to parentDiv
+            parentDiv.append(usernameP);
+
+            //create a p tag
+            let messageP = document.createElement("p");
+            //upate the innerHTHML to the appropriate data;
+            messageP.innerHTML = messageTxt;
+            //append this messgae to the parentDiv
+            parentDiv.append(messageP);
+
+            return parentDiv;
+        }
