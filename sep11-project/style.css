@@ -11,6 +11,6 @@ body{
     border: 2px solid black
 }
 
-#allMessages{
-    padding: 100px, 100px;
+#all-messages{
+    padding: 10px;
 }
