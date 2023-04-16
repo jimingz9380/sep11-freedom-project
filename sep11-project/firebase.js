@@ -40,7 +40,7 @@
         const allMessages = document.querySelector("#all-messages");
         const usernameElem = document.querySelector("#username");
         const messageElem = document.querySelector("#message");
-        const sendBtn = document.querySelector("#send-btn");
+        const sendBtn = document.querySelector("#message-btn");
 
         function updateDB(event){
             //prevent default behavior fo form refreshing
@@ -58,4 +58,4 @@
            messageElem.value = "";
         }
 
-       
+        updateDB().onclick
