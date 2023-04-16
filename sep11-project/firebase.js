@@ -54,58 +54,8 @@
 
            //print for good measure
            console.log(data);
-
            //write to the database
-           dataBase.push(data);
-
            messageElem.value = "";
         }
 
-        updateDB()
-        dataBase.on("child_added", addMessageToBoard);
-
-        function addMessageToBoard(rowData){
-            //print the data snapshot recieved
-            console.log(rowData);
-
-            // get the actual data as a JSON object
-            let data = rowData.val();
-
-            //print the JSON data
-            console.log("RECIEVED FROM DATABASE", data);
-
-            //make a single message element
-            let singleMessage = makeSingleMessageHTML(data.USERNAME, data.MESSAGE)
-
-            //append this to #all-message;
-            allMessages.append(singleMessage);
-
-        }
-        addMessageToBoard()
-        function makeSingleMessageHTML(usernameTxt, messageTxt){
-            //create a parent div
-            let parentDiv = document.createElement("div");
-            // add .single-messgae class
-            parentDiv.setAttribute("class", "single-message");
-
-            //create a p tag
-            let usernameP = document.createElement("p");
-            // add .single-messgae-username class
-            usernameP.classList.add("single-message-username");
-
-            //upadte innerHTML of this p
-            usernameP.innerHTML = usernameTxt + ":";
-            //append p tag to parentDiv
-            parentDiv.append(usernameP);
-
-            //create a p tag
-            let messageP = document.createElement("p");
-            //upate the innerHTHML to the appropriate data;
-            messageP.innerHTML = messageTxt;
-            //append this messgae to the parentDiv
-            parentDiv.append(messageP);
-
-            return parentDiv;
-        }
-
-        makeSingleMessageHTML()
+       
