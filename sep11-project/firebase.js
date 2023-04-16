@@ -46,7 +46,7 @@
         onValue(ref(db, "/messages"), (snapshot) => {
             let data = snapshot.val();
             allMessages.innerHTML = data
-            console.log(allMessage)
+            console.log(allMessages)
         });
 
         sendBtn.addEventListener("click", function updateDB(){
