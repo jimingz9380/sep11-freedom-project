@@ -57,13 +57,11 @@
             set(ref(db, "messages"), {
                 messageElem: messageElem.value,
             });
-            
-            let user = document.createElement("p")
-            user.innerHTML = usernameElem.value
-            let para = document.createElement("p")
-            para.innerHTML = messageElem.value
-            console.log(user + ":" + para)
-            allMessages.appendChild(user)
+
+            let chat = document.createElement("p")
+            chat.innerHTML = usernameElem.value + ":" + " " +  messageElem.value
+            console.log(chat)
+            allMessages.appendChild(chat )
 
         })
 
