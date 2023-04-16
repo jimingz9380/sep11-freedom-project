@@ -51,7 +51,7 @@
 
         sendBtn.addEventListener("click", function updateDB(){
             //prevent default behavior fo form refreshing
-            const numberLikes = messageElem.value;
+            // const allMessages = messageElem.value;
             set(ref(db, "messages"), {
                 messageElem: messageElem.value,
             });
