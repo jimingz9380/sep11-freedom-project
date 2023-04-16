@@ -1,3 +1,12 @@
 body{
     background-color: #8ba8b7 ;
 }
+.chat-container{
+    background-color: white;
+    border: 2px solid black
+}
+
+.p5-container{
+    background-color: white;
+    border: 2px solid black
+}
