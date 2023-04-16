@@ -46,18 +46,18 @@
         onValue(ref(db, "/messages"), (snapshot) => {
             let data = snapshot.val();
             allMessages.innerHTML = data
-            console.log(allMessages)
+            console.log(data)
         });
 
         sendBtn.addEventListener("click", function updateDB(){
             //prevent default behavior fo form refreshing
-            // const allMessages = messageElem.value;
             set(ref(db, "messages"), {
                 messageElem: messageElem.value,
             });
 
         })
 
+        console.log(allMessages)
         // let data = {
             //     USERNAME: usernameElem.value,
             //     MESSAGE: messageElem.value
