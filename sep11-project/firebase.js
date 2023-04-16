@@ -57,6 +57,13 @@
             set(ref(db, "messages"), {
                 messageElem: messageElem.value,
             });
+            
+            let user = document.createElement("p")
+            user.innerHTML = usernameElem.value
+            let para = document.createElement("p")
+            para.innerHTML = messageElem.value
+            console.log(user + ":" + para)
+            allMessages.appendChild(user)
 
         })
 
@@ -68,6 +75,3 @@
             // //print for good measure
             // console.log(data);
 
-            // let para = document.createElement("p")
-            // para.innerHTML = messageElem.value
-            // allMessages.appendChild(para)
