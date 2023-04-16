@@ -59,9 +59,9 @@
             //print for good measure
             console.log(data);
 
-            let para = document.createElement("p")
-            para.innerHTML = messageElem.value
-            allMessages.appendChild(para)
+            // let para = document.createElement("p")
+            // para.innerHTML = messageElem.value
+            // allMessages.appendChild(para)
 
         })
 
