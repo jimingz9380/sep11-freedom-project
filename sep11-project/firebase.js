@@ -44,8 +44,8 @@
         const sendBtn = document.querySelector("#message-btn");
 
         onValue(ref(db, "/messages"), (snapshot) => {
-            let data = snapshot.val();
-            allMessages.innerHTML = data.val()
+            let data = snapshot;
+            allMessages.innerHTML = data
             console.log(data)
         });
 
