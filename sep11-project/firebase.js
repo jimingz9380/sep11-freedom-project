@@ -36,21 +36,40 @@
             });
 
         });
+        const username = prompt("What's your name?");
+        document.getElementById("send-message").addEventListener("submit", postChat);
+        function postChat(e) {
+            e.preventDefault();
+            const timestamp = Date.now();
+            const chatTxt = document.getElementById("chat-txt");
+            const message = chatTxt.value;
+            chatTxt.value = "";
+            db.ref("messages/" + timestamp).set({
+                usr: username,
+                msg: message,
+            });
+        }
 
-        const allMessages = document.querySelector("#all-messages");
-        const usernameElem = document.querySelector("#user-input");
-        const messageElem = document.querySelector("#message-input");
-        const sendBtn = document.querySelector("#message-btn");
+        const fetchChat = db.ref("messages/");
+            fetchChat.on("child_added", function (snapshot) {
+            const messages = snapshot.val();
+            const msg = "<li>" + messages.usr + " : " + messages.msg + "</li>";
+            document.getElementById("messages").innerHTML += msg;
+        });
+        // const allMessages = document.querySelector("#all-messages");
+        // const usernameElem = document.querySelector("#user-input");
+        // const messageElem = document.querySelector("#message-input");
+        // const sendBtn = document.querySelector("#message-btn");
 
-        sendBtn.addEventListener("click", function updateDB(event){
-            //prevent default behavior fo form refreshing
+        // sendBtn.addEventListener("click", function updateDB(event){
+        //     //prevent default behavior fo form refreshing
 
-            let data = {
-                USERNAME: usernameElem.value,
-                MESSAGE: messageElem.value
-           }
-           //print for good measure
-           console.log(data);
+        //     let data = {
+        //         USERNAME: usernameElem.value,
+        //         MESSAGE: messageElem.value
+        //    }
+        //    //print for good measure
+        //    console.log(data);
 
-        })
+        // })
 
