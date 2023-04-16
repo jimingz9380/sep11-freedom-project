@@ -42,6 +42,11 @@
         const messageElem = document.querySelector("#message-input");
         const sendBtn = document.querySelector("#message-btn");
 
+        onValue(ref(db, "/messages"), (snapshot) => {
+            let data = snapshot.val();
+            numLikesDOM.innerHTML = data
+        });
+
         sendBtn.addEventListener("click", function updateDB(event){
             //prevent default behavior fo form refreshing
 
