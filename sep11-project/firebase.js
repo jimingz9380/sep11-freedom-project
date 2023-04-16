@@ -49,7 +49,7 @@
         sendBtn.addEventListener("click", function updateDB(){
             //prevent default behavior fo form refreshing
             set(ref(db, "messages"), {
-                messageElem: messageElem.value,
+                allMessages: messageElem.value,
             });
 
             let data = {
