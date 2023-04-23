@@ -1,7 +1,6 @@
         // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
-        import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
-
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+        import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
 
         const firebaseConfig = {
             apiKey: "AIzaSyByrZHtWHyaMUAxSHt5IUq897zXHPWdVys",
@@ -14,61 +13,48 @@
             measurementId: "G-V76PKJ5X2V"
         };
 
+
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const db = getDatabase(app);
 
+        // const allMessages = document.querySelector("#all-messages");
+        const usernameElem = document.querySelector("#username");
+        const messageElem = document.querySelector("#message");
+        const sendBtn = document.querySelector("#send-btn");
+        sendBtn.onclick = updateDB;
 
-        // // custom code
-        // const numLikesDOM = document.querySelector('#numLikes');
-        // onValue(ref(db, "/likes/numLikes"), (snapshot) => {
-        //     let data = snapshot.val();
-        //     numLikesDOM.innerHTML = data
-        //     console.log(data)
 
-        // });
+        function updateDB(event){
 
-        // document.querySelector('button').addEventListener('click',function(){
-        //     // const numberLikes = parseInt(numLikes[i].innerHTML) + 1
-
-        //     const numberLikes = parseInt(numLikesDOM.innerHTML) + 1;
-        //     set(ref(db, "likes"), {
-        //         numLikes: numberLikes,
-        //     });
-
-        // });
-
-        const allMessages = document.querySelector("#all-messages");
-        const usernameElem = document.querySelector("#user-input");
-        const messageElem = document.querySelector("#message-input");
-        const sendBtn = document.querySelector("#message-btn");
-
-        onValue(ref(db, "/messages"), (snapshot) => {
-            let data = snapshot.val();
-            allMessages.innerHTML = data
-            console.log(snapshot)
-
-            console.log(data)
-        });
-
-        sendBtn.addEventListener("click", function updateDB(event){
-            //prevent default behavior fo form refreshing
             event.preventDefault();
-            set(ref(db, "messages"), {
-                messageElem: messageElem.value,
+            const timestamp = Date.now();
+
+            let data = {
+                USERNAME: usernameElem.value,
+                MESSAGE: messageElem.value
+            }
+
+            console.log(data, timestamp);
+            messageElem.value = "";
+
+            //auto scroll to bottom
+            document
+            .getElementById("all-messages")
+            .scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+
+            // create db collection and send in the data
+            set(ref(db, "messages/"), {
+                messageinfo: data,
             });
 
-            let chat = document.createElement("p")
-            chat.innerHTML = usernameElem.value + ":" + " " +  messageElem.value
-            allMessages.appendChild(chat)
+        }
 
-        })
-
-        console.log(allMessages)
-        // let data = {
-            //     USERNAME: usernameElem.value,
-            //     MESSAGE: messageElem.value
-            // }
-            // //print for good measure
-            // console.log(data);
-
+        onValue(ref(db, "messages/messageinfo"), function (snapshot) {
+            const messages = snapshot.val();
+            const txt = document.createElement("p")
+            txt.innerHTML = messages.USERNAME  + ": " +  messages.MESSAGE;
+            let div = document.getElementById("all-messages")
+            console.log(messages.MESSAGE, messages.USERNAME)
+            div.appendChild(txt)
+        });

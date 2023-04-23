@@ -6,6 +6,23 @@ body{
     border: 2px solid black
 }
 
+#chatbox-container {
+    width: 90vw;
+    height: 90vh;
+    background-color: var(--secondary);
+
+    /* CSS box model */
+    margin: 0 auto;
+    padding: 1%;
+    border-radius: 10px;
+
+    /* flexbox */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .p5-container{
     background-color: white;
     border: 2px solid black
