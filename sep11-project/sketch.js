@@ -7,11 +7,24 @@
             rectMode(CENTER);
         }
 
-        function mousePressed(){
-            if(mouseX > 101 && mouseY > 301){
-                console.log(mouseX, mouseY)
+        let shapePicker = 0
+        mousexArr = {}
+        mouseyArr = {}
 
+
+        function mousePressed(){
+            if(mouseX > 0 && mouseX < 101 && mouseY > 0 && mouseY < 101 ){
+                shapePicker= 0
+                // console.log(0)
+            } else if(mouseX > 0 && mouseX < 101 && mouseY > 101 && mouseY < 201 ){
+                shapePicker  = 1
+                // console.log(1)
+            } else if(mouseX > 0 && mouseX < 101 && mouseY > 201 && mouseY < 301 ){
+                shapePicker = 2
+                // console.log(2)
             }
+            mousexArr.push()
+            console.log(mousexArr)
         }
         function draw() {
             background(35, 97, 69);
@@ -28,5 +41,14 @@
             triangle(50, 125, 25, 175, 75, 175);
             rect(50, 250, 75);
 
+            if(mouseIsPressed && shapePicker == 0){
+                ellipse(mouseX, mouseY, 50);
+
+            }else if(mouseIsPressed && shapePicker == 1){
+                triangle(mouseX, mouseY - 50, mouseX + 50, mouseY + 50, mouseX - 50, mouseY + 50)
+            }else if(mouseIsPressed && shapePicker == 2){
+                rectMode(CENTER);
+                rect(mouseX, mouseY, 50);
+            }
 
         }
