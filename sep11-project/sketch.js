@@ -2,78 +2,25 @@
             var canvas = createCanvas(windowWidth/1.1, windowHeight/1.5);
 
             canvas.parent('sketch-holder');
-
             background(0);
-
             noStroke();
-
             rectMode(CENTER);
         }
 
-        let mySpeed = 3;
-        let myXPos = 100;
-        let myYPos = 100;
-
-        //these will track the coords of my edges
-        let myLeft, myRight, myTop, myBottom;
-
-        //these will track my enemy coords edge
-        let enemyLeft, enemyRight, enemyTop, enemyBottom;
-
-        let enemyXPos = 300;
-        let enemyYPos = 300;
-
+        function mousePressed(){
+            console.log(mouseX, mouseY)
+        }
         function draw() {
-            background(0);
+            background(35, 97, 69);
+            //box circle, square, and trianle
+            fill(0)
+            rect(0, 0, 100, 100);
+            rect(0, 100, 100, 100);
+            rect(0, 200, 100, 100);
 
-            //this is the player
-            fill(255, 0, 0);
-            rect(myXPos, myYPos, 50, 50);
+            fill(255);
+            ellipse(50, 50, 25);
+            triangle(50, 150, 25, 175, 75, 175);
+            rect(0, 210, 75, 75);
 
-            //this is the enemy
-            fill(0, 0, 255);
-            rect(enemyXPos, enemyYPos, 50, 50);
-
-            if(keyIsDown(LEFT_ARROW)){
-                myXPos -= 3;
-            }
-
-            if(keyIsDown(RIGHT_ARROW)){
-                myXPos += 3;
-            }
-
-            if(keyIsDown(UP_ARROW)){
-                myYPos -= 3;
-            }
-
-            if(keyIsDown(DOWN_ARROW)){
-                myYPos += 3;
-            }
-
-            myLeft = myXPos - 25;
-            myRIght = myXPos + 25;
-            myTop = myYPos - 25;
-            myBottom = myYPos + 25;
-
-            enemyLeft = enemyXPos -25;
-            enemyRight = enemyXPos + 25;
-            enemyTop = enemyYPos - 25;
-            enemyBottom = enemyYPos + 25;
-
-            //detect NON-Collision
-            if(
-                myLeft > enemyRight ||
-                myRight < enemyLeft ||
-                myTop > enemyBottom ||
-                myBottom < enemyTop
-            ){
-                //do nothing
-            }
-
-            //detect collistion
-            else {
-                fill(random(255), random(255), random(255))
-                textSize(22);
-                text("Collision!",  140, 480);
-            }
         }
