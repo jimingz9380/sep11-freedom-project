@@ -8,7 +8,10 @@
         }
 
         function mousePressed(){
-            console.log(mouseX, mouseY)
+            if(mouseX > 101 && mouseY > 301){
+                console.log(mouseX, mouseY)
+
+            }
         }
         function draw() {
             background(35, 97, 69);
@@ -24,6 +27,6 @@
             ellipse(50, 50, 50);
             triangle(50, 125, 25, 175, 75, 175);
             rect(50, 250, 75);
-            
+
 
         }
