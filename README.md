@@ -22,7 +22,7 @@ X
 * [Tinker Tool](entries/entry02.md)
 * [Tinker Tool P2](entries/entry03.md)
 * [Plan and Create](entries/entry04.md)
-* [Blog Entry 5](entries/entry05.md)
+* [MVP](entries/entry05.md)
 * [Blog Entry 6](entries/entry06.md)
 * [Blog Entry 7](entries/entry07.md)
 * [Blog Entry 8](entries/entry08.md)
