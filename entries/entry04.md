@@ -10,6 +10,18 @@ I'm in the **EDP of plan and create**. My first step of working on the year long
 ![project](https://user-images.githubusercontent.com/91745086/226497517-7b99c903-b1e2-4068-842a-0d9cb4feee4d.png)
 [link to preview code folder](https://github.com/jimingz9380/sep11-freedom-project/tree/main/sep11-project)
 
+In my firebase I started with making a chatbox by using the same format as the like button for connecting firebase. The conflict I had with this was when using the same format, when I tried to recieve the data from firebase I get the reponse with **null** or **[object, object]**. I had another problem thinking that seen it only recieve firebase data from one set of ref, it alway gonna be the one and only same text when you refresh the page, so I had to find naother way to solve this solution.
+
+```js
+ onValue(ref(db, "messages/messageinfo"), function (snapshot) {
+     const messages = snapshot.val();
+     const txt = document.createElement("p")
+     txt.innerHTML = messages.USERNAME  + ": " +  messages.MESSAGE;
+     let div = document.getElementById("all-messages")
+     console.log(messages.MESSAGE, messages.USERNAME)
+     div.appendChild(txt)
+ });
+```
 ### Next Step
 My next step is to continuing working on the my MVP because even though I have finished a part of the MVP I didn't fully complete it. Another part I need to work on is the function of the realtime database for a real time chat box due to the last blog entry I have only learned how to really connect to firebase and some part of the function of realtime database. The chatbox function allow people to talk to each in live chat.  
 
