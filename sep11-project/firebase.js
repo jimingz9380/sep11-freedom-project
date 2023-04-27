@@ -44,17 +44,25 @@
             .scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
 
             // create db collection and send in the data
-            set(ref(db, "messages/"), {
+            set(ref(db, "messages/" + timestamp), {
                 messageinfo: data,
             });
 
         }
 
-        onValue(ref(db, "messages/messageinfo"), function (snapshot) {
+        onValue(ref(db, "messages/" + timestamp  ), function (snapshot) {
             const messages = snapshot.val();
+            console.log(messages)
+
+            for (const [key, value] of Object.entries(messages)) {
+                // console.log(`${key}: ${value}`);
+                console.log(value.messageinfo)
+            }
+
+
             const txt = document.createElement("p")
             txt.innerHTML = messages.USERNAME  + ": " +  messages.MESSAGE;
             let div = document.getElementById("all-messages")
-            console.log(messages.MESSAGE, messages.USERNAME)
+            // console.log(messages.MESSAGE, messages.USERNAME)
             div.appendChild(txt)
         });
