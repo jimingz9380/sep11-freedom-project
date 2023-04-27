@@ -1,3 +1,8 @@
+        let shapePicker = 0
+        let capcity;
+        mousexArr = []
+        mouseyArr = []
+
         function setup() {
             var canvas = createCanvas(windowWidth/1.1, windowHeight/1.5);
 
@@ -5,16 +10,12 @@
             background(0);
             noStroke();
             rectMode(CENTER);
+            capcity = 1
         }
-
-        let shapePicker = 0
-        let limits = 1
-        mousexArr = []
-        mouseyArr = []
 
 
         function mousePressed(){
-            limits++
+            capcity++
             // console.log(mouseX, mouseY)
             if(mouseX > 0 && mouseX < 101 && mouseY > 0 && mouseY < 101 ){
                 shapePicker= 0
@@ -49,7 +50,7 @@
             triangle(50, 125, 25, 175, 75, 175);
             rect(50, 250, 75);
 
-            for(let i = 1; i < limits; i++){
+            for(let i = 1; i < capcity; i++){
 
                 if(shapePicker == 0 && mouseX > 101){
                     ellipse(mousexArr[i], mouseyArr[i], 50);
