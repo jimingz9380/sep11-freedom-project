@@ -44,13 +44,13 @@
             .scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
 
             // create db collection and send in the data
-            set(ref(db, "messages/" + timestamp), {
+            set(ref(db, "messages/"), {
                 messageinfo: data,
             });
 
         }
 
-        onValue(ref(db, "messages/" + timestamp  ), function (snapshot) {
+        onValue(ref(db, "messages/messageinfo"), function (snapshot) {
             const messages = snapshot.val();
             console.log(messages)
 

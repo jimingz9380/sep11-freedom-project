@@ -1,3 +1,15 @@
+        let shapePicker = 0
+        let limits = 1
+        let cirxArr = []
+        let ciryArr = []
+
+        let trixArr = []
+        let triyArr = []
+
+        let rectxArr = []
+        let rectyArr = []
+
+
         function setup() {
             var canvas = createCanvas(windowWidth/1.1, windowHeight/1.5);
 
@@ -5,63 +17,63 @@
             background(0);
             noStroke();
             rectMode(CENTER);
+
         }
 
-        let shapePicker = 0
-        let limits = 1
-        mousexArr = []
-        mouseyArr = []
-
-
-        function mousePressed(){
+        function mouseDragged(){
             limits++
             // console.log(mouseX, mouseY)
-            if(mouseX > 0 && mouseX < 101 && mouseY > 0 && mouseY < 101 ){
+            if(mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseY < 100 ){
                 shapePicker= 0
                 // console.log(0)
-            } else if(mouseX > 0 && mouseX < 101 && mouseY > 101 && mouseY < 201 ){
+            } else if(mouseX > 0 && mouseX < 100 && mouseY > 100 && mouseY < 200 ){
                 shapePicker  = 1
                 // console.log(1)
-            } else if(mouseX > 0 && mouseX < 101 && mouseY > 201 && mouseY < 301 ){
+            } else if(mouseX > 0 && mouseX < 100 && mouseY > 200 && mouseY < 300 ){
                 shapePicker = 2
                 // console.log(2)
             }
 
-            if(mouseX > 101 && mouseY > 0 && mouseY < 301){
-                mousexArr.push(mouseX)
-                mouseyArr.push(mouseY)
-                console.log(mouseX, mouseY)
+            if(mouseX > 101 && shapePicker == 0){
+                cirxArr.push(mouseX)
+                ciryArr.push(mouseY)
+                // console.log(mouseX, mouseY)
+            } else if(mouseX > 101 && shapePicker == 1){
+                trixArr.push(mouseX)
+                triyArr.push(mouseY)
+                // console.log(mouseX, mouseY)
+            } else if(mouseX > 101 && shapePicker == 2){
+                rectxArr.push(mouseX)
+                rectyArr.push(mouseY)
+                // console.log(mouseX, mouseY)
             }
 
         }
         function draw() {
+            rectMode(CORNER)
+            stroke(255)
             background(35, 97, 69);
             //box circle, square, and trianle
-            fill(0)
-            rect(0, 0, 200, 200);
-            rect(0, 100, 200, 200);
-            rect(0, 200, 200, 200);
-            stroke(255)
-            line(0, 200, 100, 200)
+            fill(0);
+            rect(0, 0, 100, 100);
+            rect(0, 100, 100, 100);
+            rect(0, 200, 100, 100);
 
-            fill(255);
+
+            //color
+            fill(200)
             ellipse(50, 50, 50);
             triangle(50, 125, 25, 175, 75, 175);
-            rect(50, 250, 75);
+            rect(25, 225, 50);
 
             for(let i = 1; i < limits; i++){
+                noStroke()
+                ellipse(cirxArr[i], ciryArr[i], 25);
 
-                if(shapePicker == 0 && mouseX > 101){
-                    ellipse(mousexArr[i], mouseyArr[i], 50);
-                    // console.log(mouseX)
-                }
-                else if(shapePicker == 1 && mouseX > 101 && mouseY > 0 && mouseY < 301){
-                    triangle(mousexArr[i],  mouseyArr[i] - 50, mousexArr[i] + 50, mouseyArr[i] + 50, mousexArr[i] - 50,  mouseyArr[i] + 50)
+                triangle(trixArr[i],  triyArr[i] - 10, trixArr[i] + 10, triyArr[i] + 10, trixArr[i] - 10,  triyArr[i] + 10)
 
-                }else if(shapePicker == 2 && mouseX > 101 && mouseY > 0 && mouseY < 301){
-                    rectMode(CENTER);
-                    rect(mousexArr[i],  mouseyArr[i], 50);
-                }
+                rectMode(CENTER);
+                rect(rectxArr[i],  rectyArr[i], 25);
             }
 
         }
