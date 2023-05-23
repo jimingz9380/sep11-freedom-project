@@ -2,17 +2,17 @@
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
         import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
 
+       
         const firebaseConfig = {
-            apiKey: "AIzaSyByrZHtWHyaMUAxSHt5IUq897zXHPWdVys",
-            authDomain: "fir-realtime-trial2.firebaseapp.com",
-            databaseURL: "https://fir-realtime-trial2-default-rtdb.firebaseio.com",
-            projectId: "fir-realtime-trial2",
-            storageBucket: "fir-realtime-trial2.appspot.com",
-            messagingSenderId: "766643859179",
-            appId: "1:766643859179:web:0435595dd4b47308e3d8ae",
-            measurementId: "G-V76PKJ5X2V"
+            apiKey: "AIzaSyApfS1-JmaNAvzd5tG6KFPqKctCz0P22wU",
+            authDomain: "realtimedatav2.firebaseapp.com",
+            databaseURL: "https://realtimedatav2-default-rtdb.firebaseio.com",
+            projectId: "realtimedatav2",
+            storageBucket: "realtimedatav2.appspot.com",
+            messagingSenderId: "531730238603",
+            appId: "1:531730238603:web:47671a6b0c3bda28c1d88e",
+            measurementId: "G-F5450TTLQS"
         };
-
 
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
