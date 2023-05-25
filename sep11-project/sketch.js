@@ -52,7 +52,7 @@
         function draw() {
             rectMode(CORNER)
             stroke(255)
-            background(13,110,253);
+            background(207,226,255);
             //box circle, square, and trianle
             fill(0);
             rect(0, 0, 100, 100);
