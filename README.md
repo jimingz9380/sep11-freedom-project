@@ -1,6 +1,5 @@
 # SEP11 Freedom Project
-by X
-
+This I am learning Javascript. It is where Html website can hav funcational action. For example in my html coding area, it will have a button and when I connect it with javascript 
 ## Context
 The "Freedom Project" for SEP11 is all about X. The purpose of this blog is to X.
 
