@@ -13,6 +13,10 @@ For the in [Class presentation](https://docs.google.com/presentation/d/1pDoRKaQX
 ### elevator pitch
 An [Elevator pitch](https://docs.google.com/document/d/1Lijl8W_xwJwV60-3EU42tbs5dD-WwCgUMtA5lWbDDTk/edit#) is a 4-5 sentence paragraph that give out the purpose of your creation. I was nervous at that time because I feel that my website wasn't great compare to other. I had spend most time learning the latest verion of firebase that I didn't made my front cover to look really good even though I had an another extension called bootstrap. In addition while talking to the judge I also have to show my [project](https://jimingz9380.github.io/sep11-freedom-project/sep11-project/) and talking relavent information that would interest my judge about online chat.
 
+![pitch](https://github.com/jimingz9380/sep11-freedom-project/assets/91745086/61288e77-a3f6-48ac-b1ec-f77974b6b1f6)
+Note: The link for the Elevator pitch note is all the way at the bottom.
+
+
 ### Takeaway
 The presentation have help me develop the skill of <ins>communication, consideration, and embracing failure</ins>. Communication increases my experience of how to present my product overall. While giving the presentation I would need to consider what should I present that is the most relavent information that I want my audience to know. After the expo I was able to realize that I need to have more than one functionality than a chatbox and better website because comparting to other it was not attractive enough. This was not the only lesson I learn, in the class presentation, I learn that I need to be more specific because I didn't give example of my takeaway and this is an failure that I will fix next time.
 
