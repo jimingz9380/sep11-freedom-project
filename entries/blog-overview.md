@@ -10,21 +10,22 @@ This blog entry are the proof I have of how I was able to finised my project. In
 ### Implications
 ```
 Pros (+):
-  Allow communication to the world, government can even use it, but they just have to increase their security.
-  help community to have a relaxe chat without being observe.
+  - Allow communication to the world, government can even use it, but they just have to increase their security.
+  - help community to have a relaxe chat without being observe.
+  - individual people can increase social ability 
+  - people can also talk about there culture seen it just a chatbxo without any limitation 
   
 Cons (-):
-  Sometime their don’t do it for other, but for themself
-  Could be a scam 
-  Unsafe working conditions
-  Unfair treatment to business
+  - no protection is exchange information in business(people can abuse it)
+  - no system that prevent cycber bullying, but it possible to fix it.
 ```
 
-## Links
+### Links
 
 [chabox link](https://jimingz9380.github.io/sep11-freedom-project/sep11-project/)
 
 [Presenation Link](https://docs.google.com/presentation/d/1pDoRKaQXPVadhXDwf-0TuSuKAdN5OSBb2EKo4xS-nlw/edit)
+
 [Previous](entry06.md) | [Next](entry08.md)
 
 [Home](../README.md)
